@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="613.0" prefWidth="871.0" styleClass="anchor" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane styleClass="anchor">
+          <children>
+            <Label fx:id="name" alignment="CENTER" layoutX="68.0" layoutY="23.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Patrik" textAlignment="CENTER" wrapText="false">
+              <font>
+                <Font size="18.0" fx:id="x1" />
+              </font>
+              <textFill>
+                <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+              </textFill>
+            </Label>
+                  <ImageView fitHeight="45.0" fitWidth="54.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/chat.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="27.0" fitWidth="50.0" layoutX="151.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+                  <Separator layoutX="-2.0" layoutY="57.0" prefHeight="16.0" prefWidth="228.0" />
+                  <ImageView fx:id="privateChat" fitHeight="27.0" fitWidth="45.0" layoutX="20.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="476.79999999999995" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="188.2" AnchorPane.topAnchor="73.0">
+                     <image>
+                        <Image url="@img/chat_1.png" />
+                     </image></ImageView>
+                  <ImageView fx:id="group" fitHeight="27.0" fitWidth="45.0" layoutX="76.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="479.20000000000005" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="132.2" AnchorPane.topAnchor="73.0">
+                     <image>
+                        <Image url="@img/group.png" />
+                     </image></ImageView>
+                  <ImageView fx:id="addFriend" fitHeight="27.0" fitWidth="45.0" layoutX="126.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="481.6" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="82.19999999999999" AnchorPane.topAnchor="73.0">
+                     <image>
+                        <Image url="@img/addClient.png" />
+                     </image></ImageView>
+                  <ImageView fx:id="groupCreation" fitHeight="27.0" fitWidth="45.0" layoutX="175.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" styleClass="imageView" AnchorPane.bottomAnchor="484.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="33.19999999999999" AnchorPane.topAnchor="73.0">
+                     <image>
+                        <Image url="@img/groupCreate.png" />
+                     </image></ImageView>
+                  <Label layoutX="22.0" layoutY="100.0" styleClass="errorLabel" text="Chat" AnchorPane.bottomAnchor="460.79999999999995" AnchorPane.leftAnchor="22.00000000000001" AnchorPane.rightAnchor="188.39999999999998" AnchorPane.topAnchor="100.0">
+                     <font>
+                        <Font size="9.0" />
+                     </font></Label>
+                  <Label layoutX="72.0" layoutY="100.0" styleClass="errorLabel" text="Group" AnchorPane.bottomAnchor="463.19999999999993" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="129.6" AnchorPane.topAnchor="100.0">
+                     <font>
+                        <Font size="9.0" />
+                     </font></Label>
+                  <Label layoutX="128.0" layoutY="102.0" styleClass="errorLabel" text="Add" AnchorPane.bottomAnchor="463.6" AnchorPane.leftAnchor="128.0" AnchorPane.rightAnchor="84.79999999999998" AnchorPane.topAnchor="102.0">
+                     <font>
+                        <Font size="9.0" />
+                     </font></Label>
+                  <ListView fx:id="groups" layoutY="126.0" prefHeight="343.0" prefWidth="235.0" styleClass="list-view" />
+                  <ListView fx:id="addingList" layoutY="217.0" prefHeight="260.0" prefWidth="235.0" styleClass="list-view" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="217.0" />
+                  <TextField fx:id="addField" layoutX="16.0" layoutY="137.0" prefWidth="200.0" AnchorPane.rightAnchor="19.0" />
+                  <Button fx:id="searchBtn" layoutX="86.0" layoutY="184.0" mnemonicParsing="false" onAction="#search" text="Search" AnchorPane.topAnchor="184.0" />
+                  <ListView fx:id="allFriends" layoutX="-4.0" layoutY="127.0" prefHeight="354.0" prefWidth="243.0" styleClass="list-view" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="-4.0" />
+                  <Label layoutX="175.0" layoutY="105.0" prefHeight="14.0" prefWidth="27.0" styleClass="errorLabel" text="Create">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+          </children>
+        </AnchorPane>
+        <Pane prefHeight="-1.0" prefWidth="-1.0">
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="576.0" prefWidth="434.0" styleClass="anchor">
+              <children>
+                <Label fx:id="chatName" alignment="CENTER" font="$x1" layoutX="-1.0" layoutY="22.0" prefHeight="27.0" prefWidth="138.0" style="&#10;" text="Hello" textAlignment="CENTER" textFill="$x2" wrapText="false" AnchorPane.rightAnchor="297.0" />
+                        <ListView fx:id="mainChat" layoutY="61.0" prefHeight="408.0" prefWidth="434.0" styleClass="list-view" AnchorPane.bottomAnchor="118.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="61.0" />
+                        <TextField fx:id="sendField" layoutX="68.0" layoutY="492.0" prefHeight="26.0" prefWidth="230.0" />
+                        <Button layoutX="328.0" layoutY="493.0" mnemonicParsing="false" onAction="#sendMessage" text="Send" />
+                        <ListView fx:id="groupOnlineClients" layoutX="150.0" layoutY="16.0" orientation="HORIZONTAL" prefHeight="38.0" prefWidth="283.0" styleClass="list-view" />
+                        <TextField fx:id="changeNamer" layoutX="127.0" layoutY="23.0" AnchorPane.leftAnchor="128.0" AnchorPane.rightAnchor="158.59999999999997" />
+                        <Button fx:id="changeBtn" layoutX="302.0" layoutY="23.0" mnemonicParsing="false" onAction="#changeName" text="Change" AnchorPane.leftAnchor="302.0" />
+                        <ImageView fx:id="closeName" fitHeight="26.0" fitWidth="34.0" layoutX="380.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="28.399999999999977">
+                           <image>
+                              <Image url="@img/quit.png" />
+                           </image>
+                        </ImageView>
+              </children>
+            </AnchorPane>
+        </Pane>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="215.0" styleClass="anchor">
+          <children>
+            <Label fx:id="friendsLabel" alignment="CENTER" font="$x1" layoutX="14.0" layoutY="22.0" style="&#10;" text="Requests" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                  <ImageView fx:id="friendRequest" fitHeight="45.0" fitWidth="52.0" layoutX="108.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/friend-request-1.png" />
+                     </image>
+                  </ImageView>
+                  <ListView fx:id="requestView" layoutX="-7.0" layoutY="66.0" prefHeight="408.0" prefWidth="215.0" AnchorPane.bottomAnchor="117.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="61.0" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" styleClass="anchor" VBox.vgrow="NEVER">
+      <children>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+</VBox>
